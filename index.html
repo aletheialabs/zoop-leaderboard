@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>$ZOOP Leaderboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0d1117;
+      color: #f0f6fc;
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 {
+      color: #00ff91;
+    }
+    table {
+      width: 90%;
+      margin: 2rem auto;
+      border-collapse: collapse;
+      background: #161b22;
+    }
+    th, td {
+      padding: 1rem;
+      border: 1px solid #30363d;
+    }
+    th {
+      background: #21262d;
+      color: #58a6ff;
+    }
+  </style>
+</head>
+<body>
+  <h1>$ZOOP Trading Contest Leaderboard</h1>
+  <p>Live Rankings • Updated Daily</p>
+
+  <table id="leaderboard">
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Wallet</th>
+        <th>Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Dynamic rows inserted here -->
+    </tbody>
+  </table>
+
+  <script>
+    const data = [
+      { wallet: "0xAbC...123", score: 182 },
+      { wallet: "0xDeF...456", score: 155 },
+      { wallet: "0x789...789", score: 123 }
+    ];
+
+    const tbody = document.querySelector("#leaderboard tbody");
+    data.forEach((entry, index) => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${index + 1}</td>
+        <td>${entry.wallet}</td>
+        <td>${entry.score}</td>
+      `;
+      tbody.appendChild(row);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "updated": "July 7, 2025 10:00 PM UTC",
+  "leaderboard": [
+    { "wallet": "0xABC123...DEF", "volume": "120,000" },
+    { "wallet": "0x456DEF...789", "volume": "95,000" },
+    { "wallet": "0x789ABC...012", "volume": "78,400" }
+  ]
+}
